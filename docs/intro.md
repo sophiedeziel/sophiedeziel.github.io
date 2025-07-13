@@ -2,46 +2,41 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to my digital space—a collection of notes, thoughts, and tutorials on the various topics that capture my interest as a software developer.
 
-## Getting Started
+## What You'll Find Here
 
-Get started by **creating a new site**.
+This site is intentionally **unstructured by design**. You'll discover:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- **Structured tutorials** on technical topics I'm exploring
+- **Unstructured notes** from experiments and learning sessions  
+- **Random thoughts** on development practices and tools
+- **Updates and learnings** from my side projects
+- **Prompt templates** and AI collaboration techniques
+- **Reflections** on software craftsmanship and career growth
 
-### What you'll need
+## A Living Document
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Think of this as my public learning journal. Some pages are polished guides, others are rough notes I'm still developing. The content evolves as I do—capturing both successes and the messy middle of figuring things out.
 
-## Generate a new site
+## Topics I Explore
 
-Generate a new Docusaurus site using the **classic template**.
+While the specific content varies, you'll often find me writing about:
 
-The classic template will automatically be added to your project after you run the command:
+- **Software Development**: Best practices, tools, and techniques
+- **AI Collaboration**: Working effectively with AI tools and prompt engineering
+- **Side Projects**: Lessons learned from building and shipping personal projects
+- **Career Growth**: Insights on mentoring, communication, and professional development
+- **Ruby and Rails**: Deep dives into my primary tech stack
+- **Developer Experience**: Making development more enjoyable and productive
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## How to Navigate
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- Browse the **sidebar** to see what's available
+- Check the **blog** for more narrative-style posts
+- Visit the **prompts section** for reusable AI templates
+- Remember that some content might be incomplete—it's all part of the journey
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Thanks for stopping by. I hope you find something useful here.
