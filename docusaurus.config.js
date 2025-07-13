@@ -29,6 +29,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'sophiedeziel', // Usually your GitHub org/user name.
   projectName: 'sophiedeziel.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // Branch to deploy to
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
