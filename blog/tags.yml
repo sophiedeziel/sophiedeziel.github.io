@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+ai:
+  label: AI
+  permalink: /ai
+  description: Posts about artificial intelligence and AI tools
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+prompts:
+  label: Prompts
+  permalink: /prompts
+  description: Posts about prompt engineering and optimization
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+collaboration:
+  label: Collaboration
+  permalink: /collaboration
+  description: Posts about working effectively with others

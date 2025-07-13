@@ -1,0 +1,8 @@
+{
+  "label": "Prompts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "A collection of useful prompts for AI collaboration and prompt engineering."
+  }
+}
