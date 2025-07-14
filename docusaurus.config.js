@@ -102,7 +102,6 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/blog/tags/til', label: 'Today I Learned', position: 'left'},
           {to: '/blog/tags/plog', label: 'Project Logs', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
