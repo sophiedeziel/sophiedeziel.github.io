@@ -1,0 +1,37 @@
+---
+slug: your-post-slug
+title: Your Blog Post Title
+authors: [sophie]
+tags: [development, tutorials]  # Use tags as categories - you can have multiple!
+date: 2025-07-14
+---
+
+# Your Blog Post Title
+
+Introduction paragraph goes here. This post is categorized under both "Development" and "Tutorials".
+
+<!-- truncate -->
+
+## Main Content
+
+Your main content goes here. By using multiple tags, this post will appear in both the Development and Tutorials category pages.
+
+### Using Tags as Categories
+
+- **Primary category**: Choose the main topic (e.g., `development`)
+- **Secondary categories**: Add related tags (e.g., `tutorials`, `productivity`)
+- **Be consistent**: Use the same tags across related posts
+
+### Available Categories
+
+- `ai` - AI and machine learning topics
+- `prompts` - Prompt engineering
+- `collaboration` - Team work and communication
+- `development` - Software development
+- `tutorials` - How-to guides
+- `productivity` - Efficiency tips
+- `personal` - Personal experiences
+
+## Conclusion
+
+Remember to choose appropriate tags to help readers find related content!
