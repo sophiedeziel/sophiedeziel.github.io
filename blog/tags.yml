@@ -12,3 +12,33 @@ collaboration:
   label: Collaboration
   permalink: /collaboration
   description: Posts about working effectively with others
+
+development:
+  label: Development
+  permalink: /development
+  description: Posts about software development and programming
+
+tutorials:
+  label: Tutorials
+  permalink: /tutorials
+  description: Step-by-step guides and how-to articles
+
+productivity:
+  label: Productivity
+  permalink: /productivity
+  description: Tips and tools for improving productivity
+
+personal:
+  label: Personal
+  permalink: /personal
+  description: Personal thoughts and experiences
+
+today-i-learned:
+  label: Today I Learned
+  permalink: /til
+  description: Quick lessons and discoveries from daily development
+
+project-logs:
+  label: Project Logs
+  permalink: /plog
+  description: Development logs and progress updates on various projects
