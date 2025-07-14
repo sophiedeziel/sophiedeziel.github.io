@@ -42,3 +42,23 @@ project-logs:
   label: Project Logs
   permalink: /plog
   description: Development logs and progress updates on various projects
+
+octoprint:
+  label: OctoPrint
+  permalink: /octoprint
+  description: Posts about OctoPrint and 3D printing software
+
+vibecoding:
+  label: Vibecoding
+  permalink: /vibecoding
+  description: Posts about energy-driven development and vibecoding
+
+open-source:
+  label: Open Source
+  permalink: /open-source
+  description: Posts about open source software and contributions
+
+3d-printing:
+  label: 3D Printing
+  permalink: /3d-printing
+  description: Posts about 3D printing technology and projects
