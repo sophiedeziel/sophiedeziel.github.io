@@ -18,6 +18,16 @@ development:
   permalink: /development
   description: Posts about software development and programming
 
+claude:
+  label: Claude
+  permalink: /claude
+  description: Posts about Claude AI and Claude Code
+
+development-tools:
+  label: Development Tools
+  permalink: /development-tools
+  description: Posts about tools and utilities for software development
+
 tutorials:
   label: Tutorials
   permalink: /tutorials
@@ -33,10 +43,10 @@ personal:
   permalink: /personal
   description: Personal thoughts and experiences
 
-til:
-  label: TIL
+today-i-learned:
+  label: Today I Learned
   permalink: /til
-  description: Today I Learned - Quick lessons and discoveries from daily development
+  description: Quick lessons and discoveries from daily development
 
 project-logs:
   label: Project Logs

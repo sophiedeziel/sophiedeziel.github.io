@@ -2,7 +2,7 @@
 slug: simple-question-fixed-prompts
 title: The Simple Question That Fixed My Prompts
 authors: [sophie]
-tags: [ai, prompts, collaboration, til]
+tags: [ai, prompts, collaboration]
 date: 2025-07-13
 ---
 
