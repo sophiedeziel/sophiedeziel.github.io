@@ -6,7 +6,7 @@ tags: [today-i-learned, claude, ai, productivity, development-tools, ruby]
 date: 2025-07-15
 ---
 
-# TIL: Claude Code Hooks Can Auto-Fix RuboCop Violations
+# TIL: Claude Code has Hooks!
 
 Today I learned Claude Code has **hooks**! These let you automatically run commands when certain events happen. I'm using this to auto-fix RuboCop violations every time Claude edits a Ruby file, and it's making my development flow so much smoother.
 
