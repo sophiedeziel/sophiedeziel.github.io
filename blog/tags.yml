@@ -33,10 +33,10 @@ personal:
   permalink: /personal
   description: Personal thoughts and experiences
 
-today-i-learned:
-  label: Today I Learned
+til:
+  label: TIL
   permalink: /til
-  description: Quick lessons and discoveries from daily development
+  description: Today I Learned - Quick lessons and discoveries from daily development
 
 project-logs:
   label: Project Logs
