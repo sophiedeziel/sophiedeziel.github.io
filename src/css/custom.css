@@ -28,3 +28,29 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Blog post customizations */
+.blogPostItemReadMore {
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.blogPostItemReadMore a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  padding: 0.5rem 0;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.blogPostItemReadMore a:hover {
+  text-decoration: underline;
+}
+
+.blogPostItemReadingTime {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+  font-style: italic;
+}
