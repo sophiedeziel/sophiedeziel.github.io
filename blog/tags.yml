@@ -72,3 +72,8 @@ open-source:
   label: 3D Printing
   permalink: /3d-printing
   description: Posts about 3D printing technology and projects
+
+ruby:
+  label: Ruby
+  permalink: /ruby
+  description: Posts about Ruby programming language and ecosystem
