@@ -547,7 +547,7 @@ a[class*="tag"]:hover {
 
 /* 📝 ENHANCED CODE BLOCK ACCESSIBILITY */
 
-/* Light theme code styling - only for inline code */
+/* Only style inline code, let Prism handle code blocks */
 code:not(pre code) {
   background: #f6f8fa !important;
   color: #24292e;
@@ -556,24 +556,16 @@ code:not(pre code) {
   font-family: var(--font-mono);
 }
 
-pre code {
-  background: transparent !important;
-  padding: 0;
-  /* Don't override syntax highlighting colors */
-}
-
-pre {
-  background: #f6f8fa !important;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-/* Dark theme code styling - only for inline code */
+/* Dark theme inline code styling */
 [data-theme='dark'] code:not(pre code) {
   background: #1a1a1a !important;
   color: #f0f0f0;
 }
 
+/* Custom background for dark theme code blocks */
 [data-theme='dark'] pre {
-  background: #1a1a1a !important;
+  background: var(--tech-darker-bg) !important;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem !important;
 }
