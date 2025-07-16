@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Prototype playground',
+    Svg: require('@site/static/img/prototype_playground.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        My digital sandbox for building weird stuff. Half-finished projects, crazy experiments, and the occasional breakthrough. Frequent meltdowns.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Brain dumps',
+    Svg: require('@site/static/img/brain_dumps.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The real thoughts behind the code. Mistakes I made, lessons I learned, and the random epiphanies that happen at 2am.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Tech tales',
+    Svg: require('@site/static/img/tech_tales.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Stories from the trenches of tech. Project journeys, career adventures, and the human side of building things that matter.
       </>
     ),
   },

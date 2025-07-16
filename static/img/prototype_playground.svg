@@ -1,0 +1,20 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background glitch shadow -->
+  <rect x="12" y="12" width="120" height="120" rx="18" fill="#ff3cac" opacity="0.15"/>
+  
+  <!-- Main container -->
+  <rect x="10" y="10" width="120" height="120" rx="18" fill="#0b0f1a" stroke="#00ffe7" stroke-width="3"/>
+
+  <!-- Blocks -->
+  <rect x="30" y="30" width="30" height="30" fill="#00ffe7" rx="4"/>
+  <rect x="65" y="30" width="30" height="30" fill="#ffeb3b" rx="4"/>
+  <rect x="28" y="67" width="30" height="30" fill="#ff3cac" rx="4"/>
+  <rect x="65" y="65" width="30" height="30" fill="#00ffe7" rx="4"/>
+
+  <!-- Cursor icon (simple triangle) -->
+  <polygon points="100,100 120,105 110,120" fill="#ff3cac" />
+
+  <!-- Playful glitch lines -->
+  <path d="M40 110 L45 115 L50 110" stroke="#ff3cac" stroke-width="2" fill="none"/>
+  <path d="M90 20 L95 25 L100 20" stroke="#00ffe7" stroke-width="2" fill="none"/>
+</svg>
