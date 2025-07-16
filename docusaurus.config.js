@@ -50,10 +50,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/sophiedeziel/sophiedeziel.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -88,8 +85,22 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Custom social card for Code & Chaos
+      image: 'img/social-card.png',
+      metadata: [
+        {
+          name: 'Content-Security-Policy',
+          content: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: github.com *.github.com githubusercontent.com *.githubusercontent.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none';"
+        },
+        {
+          name: 'theme-color',
+          content: '#0055dd'
+        },
+        {
+          name: 'author',
+          content: 'Sophie Déziel'
+        }
+      ],
       navbar: {
         title: 'Code & Chaos',
         logo: {
@@ -107,7 +118,7 @@ const config = {
           {to: '/blog/tags/til', label: 'TIL', position: 'left'},
           {to: '/blog/tags/plog', label: 'Project Logs', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/sophiedeziel/sophiedeziel.github.io',
             label: 'GitHub',
             position: 'right',
           },
