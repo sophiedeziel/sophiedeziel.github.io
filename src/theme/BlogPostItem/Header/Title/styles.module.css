@@ -1,10 +1,65 @@
 .title {
   font-size: 3rem;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+}
+
+/* Light theme title with animated gradient */
+.title {
+  background: linear-gradient(135deg, #0055dd, #6600cc, #cc0066, #0055dd);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.title:hover {
+  background: #0055dd;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: none;
+}
+
+/* Dark theme title with animated gradient */
+[data-theme='dark'] .title {
+  background: linear-gradient(135deg, #00ffff, #0066ff, #ff0080, #00ffff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+[data-theme='dark'] .title:hover {
+  background: #00ffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: none;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /**
   Blog post title should be smaller on smaller devices
 **/
+@media (max-width: 996px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 576px) {
   .title {
     font-size: 2rem;

@@ -1,3 +1,40 @@
 .container {
-  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+/* Light theme info container */
+.container {
+  color: #666666;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(85, 85, 221, 0.2);
+}
+
+.container time {
+  color: #0055dd;
+  font-weight: 500;
+}
+
+/* Dark theme info container */
+[data-theme='dark'] .container {
+  color: #b0b0b0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .container time {
+  color: #00ffff;
+  font-weight: 500;
+}
+
+.container::before {
+  content: '📅';
+  margin-right: -0.5rem;
 }

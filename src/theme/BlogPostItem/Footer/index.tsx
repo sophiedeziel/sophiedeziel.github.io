@@ -71,15 +71,10 @@ export default function BlogPostItemFooter(): ReactNode {
         {truncatedPost && (
           <div className="blogPostItemReadMore">
             <ReadMoreLink blogPostTitle={title} to={metadata.permalink} />
-            {typeof metadata.readingTime !== 'undefined' && (
-              <div className="blogPostItemReadingTime">
-                {Math.ceil(metadata.readingTime)} min read
-              </div>
-            )}
           </div>
         )}
         {tagsExists && (
-          <div className="margin-top--sm">
+          <div className="margin-top--lg">
             <TagsListInline tags={tags} />
           </div>
         )}

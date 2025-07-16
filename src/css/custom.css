@@ -1,56 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * 🤖 TECH-FUNKY MAGAZINE BLOG
+ * Experimental • Original • Dev-focused
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* 🤖 Tech-funky color palette - Light theme */
+  --tech-neon-cyan: #0088cc;
+  --tech-neon-pink: #cc0066;
+  --tech-neon-green: #00aa00;
+  --tech-electric-blue: #0055dd;
+  --tech-purple: #6600cc;
+  --tech-light-bg: #f8f9fa;
+  --tech-lighter-bg: #ffffff;
+  --tech-card-bg: rgba(255, 255, 255, 0.9);
+  --tech-glass-bg: rgba(255, 255, 255, 0.7);
+  
+  /* 📚 Magazine typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Override Docusaurus defaults - Light theme */
+  --ifm-color-primary: var(--tech-electric-blue);
+  --ifm-color-primary-dark: #0044bb;
+  --ifm-color-primary-darker: #003399;
+  --ifm-color-primary-darkest: #002277;
+  --ifm-color-primary-light: #2266ee;
+  --ifm-color-primary-lighter: #4477ff;
+  --ifm-color-primary-lightest: #6688ff;
+  
+  --ifm-background-color: var(--tech-light-bg);
+  --ifm-navbar-background-color: var(--tech-lighter-bg);
+  --ifm-footer-background-color: var(--tech-lighter-bg);
+  
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
+  --ifm-code-font-size: 90%;
+  --ifm-heading-font-weight: 700;
+  
+  --ifm-color-content: #333333;
+  --ifm-color-content-secondary: #666666;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 136, 204, 0.1);
+  
+  /* Better code block contrast for light theme */
+  --ifm-code-background: #f6f8fa;
+  --ifm-blockquote-background-color: #f8f9fa;
+  --ifm-pre-background: #f6f8fa;
+  --ifm-color-gray-200: #e1e4e8;
+  --ifm-color-gray-300: #d1d5da;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* 🤖 Tech-funky color palette - Dark theme */
+  --tech-neon-cyan: #00ffff;
+  --tech-neon-pink: #ff0080;
+  --tech-neon-green: #39ff14;
+  --tech-electric-blue: #0066ff;
+  --tech-purple: #8000ff;
+  --tech-dark-bg: #0a0a0a;
+  --tech-darker-bg: #050505;
+  --tech-card-bg: rgba(20, 20, 20, 0.8);
+  --tech-glass-bg: rgba(255, 255, 255, 0.05);
+  
+  --ifm-color-primary: var(--tech-neon-cyan);
+  --ifm-color-primary-dark: #00cccc;
+  --ifm-color-primary-darker: #00b3b3;
+  --ifm-color-primary-darkest: #008080;
+  --ifm-color-primary-light: #33ffff;
+  --ifm-color-primary-lighter: #66ffff;
+  --ifm-color-primary-lightest: #99ffff;
+  
+  --ifm-color-content: #e8e8e8;
+  --ifm-color-content-secondary: #b0b0b0;
+  
+  --ifm-background-color: var(--tech-dark-bg);
+  --ifm-navbar-background-color: var(--tech-darker-bg);
+  --ifm-footer-background-color: var(--tech-darker-bg);
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 255, 255, 0.15);
 }
 
-/* Blog post customizations */
+/* 🧪 EXPERIMENTAL BASE STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light theme body */
+body {
+  background: radial-gradient(ellipse at top, var(--tech-lighter-bg) 0%, var(--tech-light-bg) 100%);
+  min-height: 100vh;
+}
+
+/* Dark theme body */
+[data-theme='dark'] body {
+  background: radial-gradient(ellipse at top, var(--tech-darker-bg) 0%, var(--tech-dark-bg) 100%);
+}
+
+/* ⚡ Glitch effect for headers */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.tech-glitch {
+  position: relative;
+  animation: glitch 0.3s ease-in-out infinite alternate;
+}
+
+/* 🤖 TECH-FUNKY COMPONENTS */
+
+/* Neon glow effect */
+.tech-glow {
+  box-shadow: 0 0 20px var(--ifm-color-primary-lighter);
+  border: 1px solid var(--ifm-color-primary-dark);
+  transition: all 0.3s ease;
+}
+
+.tech-glow:hover {
+  box-shadow: 0 0 30px var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+}
+
+/* Glass morphism cards */
+.tech-glass {
+  background: var(--tech-glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* 📚 MAGAZINE-STYLE BLOG LAYOUTS */
+
+/* Enhanced blog post cards */
+.theme-blog-list-page article {
+  background: var(--tech-card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ifm-color-primary-lightest);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme specific styling */
+.theme-blog-list-page article {
+  border: 1px solid var(--ifm-color-primary-lightest);
+}
+
+/* Dark theme specific styling */
+[data-theme='dark'] .theme-blog-list-page article {
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.theme-blog-list-page article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tech-neon-cyan), var(--tech-neon-pink), var(--tech-electric-blue));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-blog-list-page article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .theme-blog-list-page article:hover {
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.theme-blog-list-page article:hover::before {
+  opacity: 1;
+}
+
+/* Magazine-style typography */
+.theme-blog-list-page h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--ifm-color-content);
+}
+
+/* Light theme title gradient with animation */
+.theme-blog-list-page h2 {
+  background: linear-gradient(135deg, var(--tech-electric-blue), var(--tech-purple), var(--tech-neon-pink), var(--tech-electric-blue));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.theme-blog-list-page h2:hover {
+  background: var(--tech-electric-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: none;
+}
+
+/* Dark theme title gradient with animation */
+[data-theme='dark'] .theme-blog-list-page h2 {
+  background: linear-gradient(135deg, var(--tech-neon-cyan), var(--tech-electric-blue), var(--tech-neon-pink), var(--tech-neon-cyan));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .theme-blog-list-page h2:hover {
+  background: var(--tech-neon-cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: none;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.theme-blog-list-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Tech-style read more links */
 .blogPostItemReadMore {
-  margin-bottom: var(--ifm-spacing-vertical);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .blogPostItemReadMore a {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
-  color: var(--ifm-color-primary);
-  padding: 0.5rem 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   display: inline-block;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Light theme read more button */
+.blogPostItemReadMore a {
+  color: var(--tech-neon-green);
+  background: rgba(0, 170, 0, 0.1);
+  border: 1px solid rgba(0, 170, 0, 0.4);
 }
 
 .blogPostItemReadMore a:hover {
-  text-decoration: underline;
+  background: rgba(0, 170, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 170, 0, 0.3);
+  transform: translateX(4px);
 }
 
-.blogPostItemReadingTime {
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
+/* Dark theme read more button */
+[data-theme='dark'] .blogPostItemReadMore a {
+  color: var(--tech-neon-green);
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+[data-theme='dark'] .blogPostItemReadMore a:hover {
+  background: rgba(57, 255, 20, 0.2);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+/* Reading time inside button styling */
+.readingTimeInButton {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.blogPostItemReadMore a::after {
+  content: ' →';
+  transition: transform 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.blogPostItemReadMore a:hover::after {
+  transform: translateX(4px);
+}
+
+/* 🏷️ Tech-style tags */
+.theme-blog-list-page .margin-bottom--md {
+  margin-bottom: 1rem !important;
+}
+
+/* Enhanced tag styling */
+a[class*="tag"] {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--tech-purple);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Light theme tags */
+a[class*="tag"] {
+  background: rgba(102, 0, 204, 0.1);
+  border: 1px solid rgba(102, 0, 204, 0.3);
+}
+
+a[class*="tag"]:hover {
+  background: rgba(102, 0, 204, 0.2);
+  box-shadow: 0 0 15px rgba(102, 0, 204, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Dark theme tags */
+[data-theme='dark'] a[class*="tag"] {
+  color: #bb88ff;
+  background: rgba(128, 0, 255, 0.25);
+  border: 1px solid rgba(187, 136, 255, 0.5);
+}
+
+[data-theme='dark'] a[class*="tag"]:hover {
+  color: #dd99ff;
+  background: rgba(128, 0, 255, 0.35);
+  box-shadow: 0 0 15px rgba(187, 136, 255, 0.4);
+}
+
+/* 🧪 EXPERIMENTAL NAVBAR ENHANCEMENTS */
+.navbar {
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--ifm-color-primary-lightest);
+}
+
+/* Light theme navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(85, 85, 221, 0.2);
+}
+
+/* Dark theme navbar */
+[data-theme='dark'] .navbar {
+  background: rgba(5, 5, 5, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.navbar__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+/* Light theme navbar title */
+.navbar__title {
+  background: linear-gradient(45deg, var(--tech-electric-blue), var(--tech-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark theme navbar title */
+[data-theme='dark'] .navbar__title {
+  background: linear-gradient(45deg, var(--tech-neon-cyan), var(--tech-neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__link {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+/* Light theme navbar links */
+.navbar__link:hover {
+  color: var(--tech-electric-blue) !important;
+  text-shadow: 0 0 10px rgba(0, 85, 221, 0.5);
+}
+
+/* Dark theme navbar links */
+[data-theme='dark'] .navbar__link:hover {
+  color: var(--tech-neon-cyan) !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 🎨 MAGAZINE-STYLE LAYOUT IMPROVEMENTS */
+
+/* Better spacing for main content */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Enhanced footer */
+.footer {
+  border-top: 1px solid var(--ifm-color-primary-lightest);
+}
+
+/* Light theme footer */
+.footer {
+  background: linear-gradient(135deg, var(--tech-lighter-bg) 0%, rgba(240, 240, 240, 0.9) 100%) !important;
+  border-top: 1px solid rgba(85, 85, 221, 0.2);
+}
+
+/* Dark theme footer */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, var(--tech-darker-bg) 0%, rgba(20, 20, 20, 0.9) 100%) !important;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.footer__title {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+/* Light theme footer titles */
+.footer__title {
+  color: var(--tech-electric-blue);
+}
+
+/* Dark theme footer titles */
+[data-theme='dark'] .footer__title {
+  color: var(--tech-neon-cyan);
+}
+
+.footer__link-item {
   color: var(--ifm-color-content-secondary);
-  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+/* Light theme footer links */
+.footer__link-item:hover {
+  color: var(--tech-neon-green);
+}
+
+/* Dark theme footer links */
+[data-theme='dark'] .footer__link-item:hover {
+  color: var(--tech-neon-green);
+}
+
+/* 🔮 EXPERIMENTAL ANIMATIONS & EFFECTS */
+
+/* Floating animation for special elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.tech-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse animation for interactive elements */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(0, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+}
+
+.tech-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* 📱 RESPONSIVE ENHANCEMENTS */
+@media (max-width: 996px) {
+  .main-wrapper {
+    padding: 0 1rem;
+  }
+  
+  .theme-blog-list-page article {
+    padding: 1.5rem;
+  }
+  
+  .theme-blog-list-page h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 🎯 FOCUS STATES FOR ACCESSIBILITY */
+*:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* 💫 CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Light theme scrollbar */
+::-webkit-scrollbar-track {
+  background: var(--tech-light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--tech-electric-blue), var(--tech-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--tech-neon-pink), var(--tech-neon-green));
+}
+
+/* Dark theme scrollbar */
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: var(--tech-darker-bg);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--tech-neon-cyan), var(--tech-electric-blue));
+  border-radius: 4px;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--tech-neon-pink), var(--tech-purple));
+}
+
+/* 📝 ENHANCED CODE BLOCK ACCESSIBILITY */
+
+/* Only style inline code, let Prism handle code blocks */
+code:not(pre code) {
+  background: #f6f8fa !important;
+  color: #24292e;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+}
+
+/* Dark theme inline code styling */
+[data-theme='dark'] code:not(pre code) {
+  background: #1a1a1a !important;
+  color: #f0f0f0;
+}
+
+/* Custom background for dark theme code blocks */
+[data-theme='dark'] pre {
+  background: var(--tech-darker-bg) !important;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem !important;
 }
