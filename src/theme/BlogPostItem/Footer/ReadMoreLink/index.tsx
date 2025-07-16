@@ -1,17 +1,23 @@
 import React, {type ReactNode} from 'react';
 import Translate, {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import {useBlogPost} from '@docusaurus/plugin-content-blog/client';
 import type {Props} from '@theme/BlogPostItem/Footer/ReadMoreLink';
 
-function ReadMoreLabel() {
+function ReadMoreLabel({readingTime}: {readingTime?: number}) {
   return (
-    <b>
+    <span>
       <Translate
         id="theme.blog.post.readMore"
         description="The label used in blog post item excerpts to link to full blog posts">
         Read more
       </Translate>
-    </b>
+      {readingTime && (
+        <span className="readingTimeInButton">
+          {' • '}{Math.ceil(readingTime)} min read
+        </span>
+      )}
+    </span>
   );
 }
 
@@ -19,6 +25,8 @@ export default function BlogPostItemFooterReadMoreLink(
   props: Props,
 ): ReactNode {
   const {blogPostTitle, ...linkProps} = props;
+  const {metadata} = useBlogPost();
+  
   return (
     <Link
       aria-label={translate(
@@ -31,7 +39,7 @@ export default function BlogPostItemFooterReadMoreLink(
         {title: blogPostTitle},
       )}
       {...linkProps}>
-      <ReadMoreLabel />
+      <ReadMoreLabel readingTime={metadata.readingTime} />
     </Link>
   );
 }
