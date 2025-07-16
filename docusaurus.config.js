@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Code & Chaos',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -86,9 +86,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Code & Chaos',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Code & Chaos Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -112,8 +112,12 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Content',
             items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
               {
                 label: 'Documentation',
                 to: '/docs/intro',
@@ -121,19 +125,27 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Connect',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/sophiedeziel',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/sophiedeziel/',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Bluesky',
+                href: 'https://bsky.app/profile/sophie.dopamine.builders',
+              },
+              {
+                label: 'Twitch',
+                href: 'https://twitch.tv/sophiediy',
+              },
+              {
+                label: 'TikTok',
+                href: 'https://tiktok.com/@sophiediy.twitch',
               },
             ],
           },
@@ -141,17 +153,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'TIL',
+                to: '/blog/tags/til',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Project Logs',
+                to: '/blog/tags/plog',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Sophie Déziel. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
