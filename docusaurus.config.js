@@ -76,6 +76,11 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        // Google Analytics configuration
+        gtag: {
+          trackingID: process.env.GA_TRACKING_ID || 'G-EQ3WT97W6J',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
