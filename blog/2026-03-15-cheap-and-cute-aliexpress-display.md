@@ -20,9 +20,13 @@ code a custom and cute desk pet/robot/companion that does nothing useful other t
 
 ## The outside
 
+The display from the front, a cute yellow cube with a small dark screen recessed into the top face
+
 ![The display from the front, a cute yellow cube with a small dark screen recessed into the top face](/img/blog/cheap-aliexpress-display/front-screen.jpg)
 
 ![Another angle of the yellow cube, showing the front and side](/img/blog/cheap-aliexpress-display/front-angle.jpg)
+
+The back of the device showing ventilation slits, a button, and a USB-C port for power
 
 ![The back of the device showing ventilation slits, a button, and a USB-C port for power](/img/blog/cheap-aliexpress-display/back-usbc-vents.jpg)
 
@@ -36,13 +40,19 @@ It slides open, and I immediately notice that there is plenty of room to cram so
 
 ## The PCB
 
+The main PCB slid out of the case, revealing an ESP-12S WiFi module and the board labeled "ESP 1.54 LCD V1.0" by ZJYUNJIE
+
 ![The main PCB slid out of the case, revealing an ESP-12S WiFi module and the board labeled "ESP 1.54 LCD V1.0" by ZJYUNJIE](/img/blog/cheap-aliexpress-display/pcb-esp12s-top.jpg)
+
+Close-up of the ESP-12S module with its FCC ID (2AHMRESP12S), CE marking, and the PCB antenna.
 
 There's also a 4-pin JST-style connector labeled VG54 on the board. The traces appear to route toward the right side of the ESP-12S, possibly to GPIO14 (SCL) and GPIO12 (SDA) — which would make it an I2C expansion port. A continuity test with a multimeter would confirm it.
 
 I noticed that some listings are mentioning a capacitive touch on the top of the device, but the one I bought does not have that. This is probably where it would be plugged in.
 
 ![Close-up of the ESP-12S module with its FCC ID (2AHMRESP12S), CE marking, and the PCB antenna](/img/blog/cheap-aliexpress-display/esp12s-closeup.jpg)
+
+The other side of the PCB showing the display flex cable connector and several surface-mount ICs
 
 ![The other side of the PCB showing the display flex cable connector and several surface-mount ICs](/img/blog/cheap-aliexpress-display/pcb-backside.jpg)
 
